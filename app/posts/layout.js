@@ -1,7 +1,12 @@
 import React from 'react';
 
-const layout = () => {
-  return <div>Вернуться наверх</div>;
+const layout = ({ children }) => {
+  return (
+    <div>
+      {children}
+      <p>Вернуться наверх</p>
+    </div>
+  );
 };
 
 export default layout;
