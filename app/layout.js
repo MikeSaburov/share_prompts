@@ -3,7 +3,7 @@ import { Children } from 'react';
 
 export const metadata = {
   title: 'Promptopia',
-  description: 'My APP',
+  description: 'Discover & Share AI Prompts',
 };
 
 const RootLayout = ({ children }) => {
