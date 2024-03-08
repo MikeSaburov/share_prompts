@@ -1,5 +1,6 @@
 import NextAuth from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
+import { connectToBD } from '@utils/database';
 
 const handler = NextAuth({
   providers: [
@@ -11,6 +12,9 @@ const handler = NextAuth({
   async session({ session }) {},
   async singIn({ profile }) {
     try {
+      await connectToBD();
+      // 1. Проверить существует ли пользватель
+      // 2. Если нет пользователя, создать его и сохранить в БД
     } catch (error) {}
   },
 });
