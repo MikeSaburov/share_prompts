@@ -15,7 +15,12 @@ const handler = NextAuth({
       await connectToBD();
       // 1. Проверить существует ли пользватель
       // 2. Если нет пользователя, создать его и сохранить в БД
-    } catch (error) {}
+
+      return true;
+    } catch (error) {
+      console.log('Не удалось подключиться к БД', error);
+      return false;
+    }
   },
 });
 
