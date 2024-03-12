@@ -43,7 +43,7 @@ const Nav = () => {
 
             <Link href="/profile">
               <Image
-                src="/assets/images/profile.png"
+                src={session?.user.image}
                 alt="Profile Icon"
                 width={37}
                 height={37}
