@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 let isConnected = false; //отслеживает состояние соединения к БД
 
 // Подключение к БД
-export const connectToBD = async () => {
+export const connectToDB = async () => {
   // Строгий запрс к БД
   mongoose.set('strictQuery', true);
   if (isConnected) {
