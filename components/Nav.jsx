@@ -10,12 +10,10 @@ const Nav = () => {
   const [toglleDropdown, setToglleDropdown] = useState(false);
 
   useEffect(() => {
-    const setUpProviders = async () => {
-      const response = await getProviders();
-      setProviders(response);
-    };
-
-    setUpProviders();
+    (async () => {
+      const res = await getProviders();
+      setProviders(res);
+    })();
   }, []);
 
   return (
@@ -91,7 +89,7 @@ const Nav = () => {
                   My Profile
                 </Link>
                 <Link
-                  href={'/create-prompt'}
+                  href="/create-prompt"
                   className="dropdown_link"
                   onClick={() => setToglleDropdown(false)}
                 >
