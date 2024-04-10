@@ -51,3 +51,14 @@ export const PATCH = async (req, { params }) => {
 };
 
 //DELETE (delete)
+export const DELETE = async (req, { params }) => {
+  try {
+    await connectToDB();
+    await Prompt.findByIdAndDelete(params.id);
+    return new Response('Подсказка успешно удалена', { status: 200 });
+  } catch (error) {
+    return new Response(JSON.stringify('Не удалось удалить подсказку😢'), {
+      status: 500,
+    });
+  }
+};
