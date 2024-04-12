@@ -48,6 +48,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
             }
             width={30}
             height={30}
+            alt="icons"
           />
         </div>
       </div>
